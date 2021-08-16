@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Amacher Lab Database</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+	<script>
+		function calc(value) {
+			var x
+			x= value + 1
+
+			document.getElementById('out1') = x
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Amacher Lab Database</h1>
+
+	<!-- Sidebar Nav -->
+	<div class="sidebar">
+		<a href="Amacher Lab Database.html">Home</a>
+		<a href="Protocols.html">Protocols</a>
+		<a href="Contact.html">Contact</a>
+		<a href="AssayData.html">Assay Data</a>
+		<a href="Plasmids.html">Plasmids</a>
+		<a href="Growths.html">Growths</a>
+		<a href="ProteinPreps.html">Protein Preps</a>
+		<a href="PeptidePreps.html">Peptide Preps</a>
+		<a href="GlycerolStockInventory.html">Glycerol Stock Inventory</a>
+		<a href="PurifiedProteinInventory.html">Purified Protein Inventory</a>
+		<a class="active" href="ConcentrationCalculator.html">Concentration Calculator</a>
+	</div>	
+
+	<div class="content">
+		This page contains a calculator that allows you to input the name of your prep 
+		<p>Ideas</p>
+		<ul>
+			<li>automatically reference the extinction coefficients + MW and return a target nanodrop reading for a given concentration</li>
+			<li>calculator for diluting protein stock for enzyme assays</li>
+			<li>option to set input value as final concentration in "Protein prep"</li>
+		</ul>
+
+		<form action="ConcentrationCalculator.html" method="GET">
+			<div>
+				<label for="">
+					Nanodrop Reading
+					<input type="number" name="nano" step="0.001" onkeypress="calc(this.value);">
+				</label>
+			</div>
+			<div>
+				<label for="">
+					Extinction Coefficient (mg/mL)
+					<input type="number" name="mg/mL" step="0.001">
+				</label>
+			</div>
+			<div>
+				<label for="">
+					Extinction Coefficient (uM)
+					<input type="number" name="uM" step="0.001">
+				</label>
+			</div>
+			<button onclick="calcConc()">Calculate Concentration</button>
+			<p id="demo"></p>
+		</form>
+
+		
+		
+
+	</div>
+
+</body>
+
+</html>

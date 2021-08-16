@@ -1,0 +1,150 @@
+/*entire website*/
+
+	body {
+		background: darkseagreen;
+		font-family: arial;
+	}
+
+/*tables*/
+
+	table, tr, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+
+	th {
+		width: fit-content;
+	}
+
+	tr, th, td, caption {
+		padding: 5px;
+		text-align: left;
+	}
+
+	/*inventory tables*/
+
+		.inv td:nth-child(1) {
+		font-weight: bold;
+		}
+
+
+		.inv tr:nth-child(odd) {
+			background-color: grey;
+		}
+
+	ul {
+		border-bottom: 1px solid black;
+		padding-bottom: 2em;
+	}
+
+	table{
+		padding: 2em;
+	}
+
+/*Sidebar Nav*/
+	.sidebar {
+		margin:  0;
+		padding: 0;
+		width:  150px;
+		background: f1f1f1;
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+	}
+
+	.sidebar a {
+		display: block;
+		color: black;
+		padding: 16px;
+		text-decoration: none;
+	}
+
+	.sidebar a.active {
+		background-color: #04AA6D;
+		border-radius: 8px;
+		color: white;
+	}
+
+	.sidebar a:hover:not(.active) {
+		background-color: #555;
+		border-radius: 8px;
+		color: white;
+	}
+
+	div.content {
+		margin-left:  150px;
+		padding: 1px 16px;
+		height: 1000px;
+	}
+
+	@media screen and (max-width:  700px) {
+		.sidebar {
+			width: 100%;
+			height:  auto;
+			position:  relative;
+		}
+		.sidebar a {float:  left;}
+		div.content {margin-left: 0;}
+	}
+
+	@media screen and (max-width:  400px) {
+		.sidebar a {
+			text-align: center;
+			float: none;
+		}
+	}
+
+/*Protocols Page*/
+	.collapsible {
+		background-color:  #04AA6D;
+		color:  white;
+		cursor: pointer;
+		padding: 15px;
+		width: 100%;
+		border: none;
+		text-align: left;
+
+		outline: none;
+		font-size: 15px;
+		border-radius: 8px;
+	}
+
+	.collapsible:hover {
+		background-color: #555;
+		border-radius: 8px;
+		color: white;
+	}
+
+	.buttonContent {
+		padding: 0 18px;
+		display: none;
+		overflow: hidden;
+		background-color: #dedede;
+		font-size: 13px;
+		border-radius: 8px;
+	}
+
+	.collapsible:after {
+		content: '\02795';
+		font-size: 10px;
+		font-style: white;
+		float: right;
+		margin-left: 5px;
+	}
+
+	.buttonActive:after {
+		content: '\2796';
+	}
+
+	.protocol ol {
+		padding-left:  8px;
+	}
+		li {
+			padding-bottom: 5px;
+		}
+
+	.tab {
+		margin-left: 40px;
+	}
+
+/*Contact Page*/
